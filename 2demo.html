@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /> -->
+    <link rel="stylesheet" href="fontawesome-free-6.4.0/css/all.min.css"> 
+    <link rel="stylesheet" href="css/2demo.css">
+    <title>Responsive Bar</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Web Dev Creative</a></div>
+            <ul class="links">
+                <li><a href="hero">Home</a></li>
+                <li><a href="about">about</a></li>
+                <li><a href="services">services</a></li>
+                <li><a href="contact">contact</a></li>
+            </ul>
+            <a href="# " class="action_btn">Get started</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+      <div class="dropdown_menu">
+        <ul>
+        <li><a href="hero">Home</a></li>
+        <li><a href="about">about</a></li>
+        <li><a href="services">services</a></li>
+        <li><a href="contact">contact</a></li>
+        <li> <a href="" class="action_btn">Get started</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>welcome</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis labore, rerum eum possimus,<br> 
+            dolorem quis error ea eveniet nihil debitis facilis libero? In cum quasi, dolore quod praesentium sunt quia.
+        </p>
+        </section>
+    </main>
+   
+   <script>
+       const toggleBtn=document.querySelector('.toggle_btn');
+       const toggleBtnIcon=document.querySelector('.toggle_btn i');
+       const dropDownMenu =document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function() {
+            dropDownMenu.classList.toggle('open')
+             const isOpen= dropDownMenu.classList.contains('open')
+             toggleBtnIcon.classList=isOpen
+            ?'fa-solid fa-xmark'
+            :'fa-solid fa-bars' 
+        }
+    </script>
+</body>
+</html>
